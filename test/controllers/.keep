@@ -1,0 +1,95 @@
+// {
+//   entities: {
+//     users:{
+//       1:{
+//         id: 1
+//         username: alo172
+//         session_token:314159
+//         password_digest: password12233$
+//       },
+
+//       12:{
+//         id: 12, 
+//         username: bob149,
+//         session_token: 951413,
+//         password_digest: starwars7777779%
+//       }
+
+//       31:{
+//         id: 31, 
+//         username: billy999,
+//         session_token: 646718,
+//         password_digest: kakarot1919&
+//       }
+//     },
+
+//     listings:{
+//       7:{ 
+//         id: 7,
+//         owner_id: 1,
+//         reserved_status: true
+//       }
+
+//       17:{
+//         id: 17,
+//         owner_id: 31,
+//         reserved_status: true
+//       }
+//     },
+
+//     reservations:{
+//       3:{ 
+//         Id: 3, 
+//         listing_id: 7,
+//         reserver_id: 12, 
+//         reservation_status: true,
+//         longitude: ,
+//         latitude: ,
+//         reservation_start: 09/09/2022,
+//         reservation_end: 09/16/2022
+//       },
+
+//       6:{ 
+//         id: 6, 
+//         listing_id: 17,
+//         reserver_id: null, 
+//         reservation_status: true,
+//         longitude: ,
+//         latitude: ,
+//         reservation_start: 12/25/2022,
+//         reservation_end: 01/02/2022
+//       }
+//     },
+
+//     reviews:{
+//       34: {
+//         id: 34,
+//         reviewer_id: 19,
+//         reviewed_listing_id: 29,
+//         body: "this was the best treehouse I have ever stayed in!" 
+//       }
+//       47: {
+//         id: 47,
+//         reviewer_id: 27,
+//         reviewed_listing_id: 8,
+//         body: "Creepy at night :("
+//       }
+
+//     },
+//   }
+
+//   ui:{
+//     modal: true/false
+//   }
+
+//   session:{
+//     id:
+//   },
+
+//   errors: {
+//     login: ["Incorrect username or password"]
+//     signup: ["Password does not meet the minimum requirement"]
+//     form: ["Can not submit with blank field"]
+//   }
+
+// }
