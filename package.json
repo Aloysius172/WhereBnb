@@ -10,11 +10,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch --mode=development"
+    "webpack": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aloysius172/WhereBnb.git"
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.5.0"
   },
   "keywords": [],
   "author": "",
