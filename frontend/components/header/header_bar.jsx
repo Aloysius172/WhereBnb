@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
-
-const HeaderBar = ({ currentUser, logOut, openModal }) => {
+const HeaderBar = ({ currentUser, currentUserName, logout, openModal }) => {
 
   const authLinks = () => (
     <nav className="login-signup">
@@ -11,17 +11,27 @@ const HeaderBar = ({ currentUser, logOut, openModal }) => {
       <button onClick={() => openModal('signup')}>Signup</button>
     </nav>
   );
+
+  
+  
+
+
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logOut}>Logout</button>
+      <h2 className="header-name">Hi, {currentUserName.username}!</h2>
+      <button className="header-button" onClick={logout}>Logout</button>
     </hgroup>
   );
 
   return (
-    currentUser ?
-      personalGreeting(currentUser, logOut) :
-      authLinks()
+    <div>
+      <Link to='/' className='header-link'><h1>WhereBnb</h1></Link>
+      {( currentUser ?
+        personalGreeting(currentUser, logout) :
+        authLinks())}
+      
+    </div>
+      
   );
 };
 

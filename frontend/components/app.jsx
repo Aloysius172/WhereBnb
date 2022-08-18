@@ -2,16 +2,23 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Route, Redirect, Switch, Link, HashRoute } from 'react-router-dom';
 import SignUpContainer from './auth/signup_form_container'
+import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import LoginContainer from './auth/login_form_container'
 import Modal from './modal/modal';
 import HeaderBarContainer from './header/header_bar_container';
+import Splash from './slash/splash';
 const App = () => (
   <div>
     <Modal/>
-    <header>
-      <Link to='/' className='header-link'><h1>WhereBnb</h1></Link>
+   <header>
+      {/* <Link to='/' className='header-link'><h1>WhereBnb</h1></Link> */}
       <HeaderBarContainer/>
-    </header>
+   </header>
+    <Switch>
+      <AuthRoute exact path="/" component ={ Splash }/>
+    </Switch>
+    {/* <Link to='/' className='header-link'><h1>WhereBnb</h1></Link>
+    <HeaderBarContainer /> */}
 
  
     {/* <Switch>

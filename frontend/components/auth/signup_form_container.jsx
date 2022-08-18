@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { signUp } from '../../actions/session/session_actions';
+import { signUp, deleteErrors } from '../../actions/session/session_actions';
 import AuthForm from './auth_form';
 import { openModal, closeModal } from '../../actions/modal/modal_actions'
 
@@ -14,12 +14,6 @@ const mapStateToProps = ({ errors }) => {
   }
 };
 
-// const mapDispatchToProps = dispatch => { 
-//   return { 
-//     action: (user) => dispatch(signUp(user)),
-//   }
-
-// }
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -29,7 +23,8 @@ const mapDispatchToProps = dispatch => {
         Login
       </button>
     ),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    deleteErrors: () => dispatch(deleteErrors())
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(AuthForm);

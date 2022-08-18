@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
       render "api/users/show"
     else
       # debugger
-      render json: ["Invalid username/password combination"], status: 401
+      render json: ["Invalid username or password"], status: 401
     end
   end
 

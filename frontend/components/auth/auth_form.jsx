@@ -10,18 +10,31 @@ class AuthForm extends React.Component {
       email: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this)
   }
 
   update(field) {
     return e => this.setState({
-      [field]: e.currentTarget.value
+      [field]: e.target.value
     });
   }
+
+  demoUser(e) {
+    this.setState({ username: "demologin", password: 'demo123' })
+  } 
+
+  componentWillUnmount() {
+    this.props.deleteErrors();
+  }
+ 
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.action(user);
+    this.props.action(user)
+    // debugger
+    // if(!this.props.errors)this.props.closeModal();
+    
   }
 
   renderErrors() {
@@ -44,33 +57,32 @@ class AuthForm extends React.Component {
           <br />
           Please {this.props.formType} or {this.props.otherForm}
           {this.renderErrors()}
+          {this.props.formType === 'Login' ? <button className="demo-login-button" onClick={this.demoUser}>Demo Login</button> : null}
           <div className="login-form">
             <br />
-            <label>Username:
               <input type="text"
                 value={this.state.username}
+                placeholder="Username"
                 onChange={this.update('username')}
                 className="login-input"
               />
-            </label>
+           
             <br />
             { this.props.formType === 'Signup' ? 
-              <label>Email:
                 <input type="text"
                   value={this.state.email}
+                  placeholder="Email"
                   onChange={this.update('email')}
                   className="login-input"
                 />
-              </label> : null }
+              : null }
             <br />
-            <label>Password:
               <input type="password"
                 value={this.state.password}
+                placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input"
               />
-            </label>
-           
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
