@@ -5,27 +5,15 @@ import SignUpContainer from './auth/signup_form_container'
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import LoginContainer from './auth/login_form_container'
 import Modal from './modal/modal';
-import HeaderBarContainer from './header/header_bar_container';
+// import HeaderBarContainer from './header/header_bar_container';
 import Splash from './slash/splash';
+import NavBarContainer from './header/nav_bar_container';
 const App = () => (
-  <div>
-    <Modal/>
-   <header>
-      {/* <Link to='/' className='header-link'><h1>WhereBnb</h1></Link> */}
-      <HeaderBarContainer/>
-   </header>
+  <div  className='app-box'>
+    <NavBarContainer/>
     <Switch>
       <AuthRoute exact path="/" component ={ Splash }/>
     </Switch>
-    {/* <Link to='/' className='header-link'><h1>WhereBnb</h1></Link>
-    <HeaderBarContainer /> */}
-
- 
-    {/* <Switch>
-      <Route exact path='/login' component={LoginContainer}/>
-      <Route exact path='/signup' component = {SignUpContainer}/>
-
-    </Switch> */}
   </div>
 );
 
