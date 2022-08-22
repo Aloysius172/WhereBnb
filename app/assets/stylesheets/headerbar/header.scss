@@ -10,14 +10,23 @@
 
 .nav-link {
   padding-left: 30px;
+  width: 75px;
+  height: 75px;
 }
 
-.user-icon-button{
+.user-icon{
   font-size: 30px;
   color: rgb(235, 181, 3);
   padding-right: 30px;
   box-shadow: 31px black;
   cursor: pointer;
+}
+
+.user-icon-div{
+  right: 30px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+  border-radius: 25px;
+  
 }
 
 #dropdown-content{
@@ -42,10 +51,28 @@
 }
 
 .search-bar-div{
-  width: 200px;
-  border: 1px solid;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+  border-radius: 25px;
+  height: 50px;
+  width: 400px;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 10px;
 }
 
+.search-bar-input{
+  display: flex;
+  background: transparent;
+  outline: none;
+  width: 90%;
+}
+
+.search-icon{
+  display: flex;
+  font-size: 20px;
+  color: rgb(235, 181, 3);
+}
 
 

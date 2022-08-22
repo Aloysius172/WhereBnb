@@ -35,13 +35,13 @@ class Button extends React.Component{
     // debugger
     if(this.state.clicked){
       return(
-        <div className="user-icon-button" onClick={this.handleClickOpen}>
+        <div className="user-icon-div" onClick={this.handleClickOpen}>
           <FaUserAlt className="user-icon"/> <Dropdown allprops={this.props.allprops}/>
         </div>
       )
     } else{
       return(
-        <div className="user-icon-button" onClick={this.handleClickClose}>
+        <div className="user-icon-div" onClick={this.handleClickClose}>
           <FaUserAlt className="user-icon"/>
         </div>
       )

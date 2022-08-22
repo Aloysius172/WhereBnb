@@ -1,5 +1,5 @@
 import React from 'react'
-import { RiSearchFill } from '@react-icons/all-files/ri/RiSearchFill'
+import { FaSearch } from '@react-icons/all-files/fa/FaSearch'
 
 
 class SearchBar extends React.Component {
@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
 
     return (
       <div className='search-bar-div'>
-        <input className='search-bar-input' type="text" /><RiSearchFill/>
+        <input className='search-bar-input' type="text" placeholder='Where would you like to go?' /><FaSearch className='search-icon'/>
       </div>
     )
   }
