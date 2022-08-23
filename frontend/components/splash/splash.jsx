@@ -1,5 +1,6 @@
 import React from "react";
 import ListingsIndex from "../listings/listings_index";
+import Footer from "./footer";
 
 class Splash extends React.Component {
   constructor(props){
@@ -10,6 +11,7 @@ class Splash extends React.Component {
     return(
       <div className="splash-div">
         <ListingsIndex/>
+        <Footer/>
       </div>
     )
   }
