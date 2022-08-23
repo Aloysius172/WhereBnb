@@ -1,6 +1,7 @@
 import React from "react";
 import Dropdown from "./dropdown";
 import { FaUserAlt } from '@react-icons/all-files/fa/FaUserAlt'
+import { FaBars } from '@react-icons/all-files/fa/FaBars'
 
 class Button extends React.Component{
   constructor(props){
@@ -36,13 +37,14 @@ class Button extends React.Component{
     if(this.state.clicked){
       return(
         <div className="user-icon-div" onClick={this.handleClickOpen}>
-          <FaUserAlt className="user-icon"/> <Dropdown allprops={this.props.allprops}/>
+          <div className="user-icon" ><FaBars/><FaUserAlt/> </div> 
+          <Dropdown allprops={this.props.allprops}/>
         </div>
       )
     } else{
       return(
         <div className="user-icon-div" onClick={this.handleClickClose}>
-          <FaUserAlt className="user-icon"/>
+          <div className="user-icon"><FaBars /><FaUserAlt/></div>
         </div>
       )
     }

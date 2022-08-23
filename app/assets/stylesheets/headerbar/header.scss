@@ -1,78 +1,102 @@
-.nav-bar{
-  position: relative;
+
+.nav-bar{ 
+  position: sticky;
+  top: 0px;
   display: flex;
+  grid-row: 3;
   flex-direction: row;
+  column-gap: 300px;
   align-items: center;
-  width:100%;
-  justify-content: space-between;
-  border-bottom: .5px solid black;
-}
-
-.nav-link {
-  padding-left: 30px;
-  width: 75px;
-  height: 75px;
-}
-
-.user-icon{
-  font-size: 30px;
-  color: rgb(235, 181, 3);
-  padding-right: 30px;
-  box-shadow: 31px black;
-  cursor: pointer;
-}
-
-.user-icon-div{
-  right: 30px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
-  border-radius: 25px;
+  width: 100%;
+  justify-content: space-evenly;
+  border: 0.5px solid lightgray;
+  background-color: white;
+  z-index: 2;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
   
 }
 
+.nav-link {
+  padding-left: 45px;
+
+}
+
+.user-icon{
+  position: absolute;
+  top: 23px;
+  right: 67px;
+  font-size: 20px;
+  color: rgb(235, 181, 3);
+  background: transparent;
+  justify-content: space-evenly;
+}
+
+.user-icon-div{
+  // right: 30px;
+  border: 0.5px solid lightgray;
+  border-radius: 25px;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  
+}
+.user-icon-div:hover {
+  box-shadow: 0.7px 0.7px 0.7px 0.7px lightgrey;
+}
+
+
 #dropdown-content{
   position: absolute;
-  right: 30px;
-  border: 1px solid black;
+  right: 55px;
+  top: 55px;
+  border: 0.5px solid lightgray;
   color: black;
   font-size: 16px;
   background-color: white;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
-  z-index: 1;
-}
+  z-index: 2;
+  align-content: center;
 
+}
+// give buttons boxshadow on hover
 .dropdown-choice:hover{
-  background-color: lightgray;
+  background-color: whitesmoke;
   width: 100%;
 }
 
 .search-bar-div{
   display: flex;
   align-items: center;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+  border: 0.5px solid lightgray;
   border-radius: 25px;
   height: 50px;
   width: 400px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-left: 25px;
   padding-right: 10px;
+  background-color: white;
 }
+
 
 .search-bar-input{
   display: flex;
   background: transparent;
   outline: none;
   width: 90%;
+  color: gray;
 }
 
 .search-icon{
   display: flex;
   font-size: 20px;
   color: rgb(235, 181, 3);
+  cursor: pointer;
 }
 
 

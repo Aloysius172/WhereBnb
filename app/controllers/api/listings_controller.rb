@@ -4,11 +4,11 @@ class Api::ListingsController < ApplicationController
   def index
     benches = bounds ? Listing.in_bounds(bounds) : Listing.all
 
-    if params[:minSeating] && params[:maxSeating]
-      benches = benches.where(seating: seating_range)
+    # if params[:minSeating] && params[:maxSeating]
+      listing = listing.where(seating: seating_range)
     end
 
-    @benches = benches.includes(:reviews, :favorite_users)
+    @listings = listings.includes(:reviews, :favorite_users)
     render :index
   end
 
@@ -22,10 +22,7 @@ class Api::ListingsController < ApplicationController
   end
 
   private
-
-  def price_range
-    (params[:minSeating]..params[:maxSeating])
-  end
+  # range
 
   def listing_params
     params.require(:listing).permit(

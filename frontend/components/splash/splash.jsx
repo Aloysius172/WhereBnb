@@ -1,4 +1,5 @@
 import React from "react";
+import ListingsIndex from "../listings/listings_index";
 
 class Splash extends React.Component {
   constructor(props){
@@ -7,8 +8,8 @@ class Splash extends React.Component {
 
   render(){
     return(
-      <div>
-        "Splash"
+      <div className="splash-div">
+        <ListingsIndex/>
       </div>
     )
   }

@@ -13,6 +13,12 @@ import { MdPool } from '@react-icons/all-files/md/MdPool'
 import { GiBarn } from '@react-icons/all-files/gi/GiBarn'
 //filter
 import { BiSliderAlt } from '@react-icons/all-files/bi/BiSliderAlt'
+//haunted
+import { GiSpookyHouse } from '@react-icons/all-files/gi/GiSpookyHouse'
+//lighthouse
+import { GiLighthouse } from '@react-icons/all-files/gi/GiLighthouse'
+//greenhouse
+import { GiGreenhouse } from '@react-icons/all-files/gi/GiGreenhouse'
 
 const FilterBar = props => {
  return(
@@ -38,8 +44,20 @@ const FilterBar = props => {
       <span>Island</span>
     </button>
     <button className='filter-bar-icon'>
-      <MdPool className='pool-icon'/>
-      <span>Pool</span>
+      <GiGreenhouse className='greenhouse-icon' />
+      <span>Greenhouse</span>
+    </button>
+    <button className='filter-bar-icon'>
+      <GiSpookyHouse className='hauntedhouse-icon' />
+      <span>Haunted</span>
+    </button>
+    <button className='filter-bar-icon'>
+      <GiLighthouse className='lighthouse-icon'/>
+      <span>Lighthouse</span>
+    </button>
+    <button className='filter-bar-icon'>
+     <MdPool className='pool-icon' />
+     <span>Pool</span>
     </button>
 
     <button className='filter-modal-button'>

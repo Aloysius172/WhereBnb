@@ -1,25 +1,39 @@
 .filter-bar-div{
-  position: relative;
+  position: sticky;
+  top: 68px;
   display: flex;
-  justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-evenly;
+  width: 100%;
+  // padding-left: 10px;
+  // padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 .filter-bar-icon{
   font-size: large;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: grey;
+}
+.filter-bar-icon:hover{
+  color: black;
 }
 .filter-modal-button{
   font-size: large;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+  border: 0.5px solid lightgray ;
   border-radius: 25px;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   padding-left: 7.5px;
   padding-right: 7.5px;
+}
+.filter-modal-button:hover{
+  box-shadow: 0.7px 0.7px 0.7px 0.7px lightgrey;
 }
