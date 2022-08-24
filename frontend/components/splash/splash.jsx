@@ -1,5 +1,5 @@
 import React from "react";
-import ListingsIndex from "../listings/listings_index";
+import ListingsIndexContainer from '../listings/listings_index_container'
 import Footer from "./footer";
 
 class Splash extends React.Component {
@@ -10,7 +10,7 @@ class Splash extends React.Component {
   render(){
     return(
       <div className="splash-div">
-        <ListingsIndex/>
+        <ListingsIndexContainer/>
         <Footer/>
       </div>
     )

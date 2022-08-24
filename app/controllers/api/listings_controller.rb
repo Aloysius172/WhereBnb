@@ -12,7 +12,7 @@ class Api::ListingsController < ApplicationController
   #   render :index
   # end
   def index 
-    # debugger
+    debugger
     @listings = Listing.all 
     render "api/listings/index"
   end
@@ -24,13 +24,12 @@ class Api::ListingsController < ApplicationController
 
   def create
     debugger
-    @listing = Listing.create!(listing_params)
-    # @listing.owner_id = current_user.id
-    @listing.reserved_status = false
+    @listing = Listing.new(listing_params)
+    # @listing.reserved_status = false
     if @listing.save
       render :show
-    # else
-    #   render json: @listing.errors.full_messages
+    else
+      render @listing.errors.full_messages
     end
   end
 
@@ -40,13 +39,14 @@ class Api::ListingsController < ApplicationController
   def listing_params
     params.require(:listing).permit(
       :title,
+      :reserved_status,
       :description,
       :price,
       :rooms,
       :beds,
       :bathrooms,
       :property_type,
-      :longitutde,
+      :longitude,
       :latitude,
     )
   end

@@ -1,13 +1,16 @@
-import * as listingAPIUtil from '../../utils/listings_utils'
+import * as ListingAPIUtil from '../../utils/listings_utils'
 
-export const RECEIVE_LISTINGS = "RECEIVE_ALL_LISTINGS"
+export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS"
 export const RECEIVE_LISTING = "RECEIVE_LISTING"
 export const REMOVE_LISTING = "REMOVE_LISTING"
 
-export const receiveListings = listings =>({
+export const receiveListings = listings =>{
+  debugger
+  return{
   type: RECEIVE_LISTINGS,
   listings
-})
+  }
+}
 
 export const receiveListing = listing => ({
   type: RECEIVE_LISTING,
@@ -18,23 +21,23 @@ export const removeListing = () => ({
   type: REMOVE_LISTING
 })
 
-export const fetchListings = filters => dispatch =>{
+export const fetchListings = ()=> dispatch =>{
   debugger
-  return listingAPIUtil.fetchListings(filters)
+  return ListingAPIUtil.fetchListings()
   .then(listings => dispatch(receiveListings(listings)))
 }
 
 
 export const fetchListing = id => dispatch => {
   // debugger
-  return listingAPIUtil.fetchListing(id)
+  return ListingAPIUtil.fetchListing(id)
     .then(listing => dispatch(receiveListing(listing)))
 }
 
 
 export const createListing = formListing => dispatch => {
   // debugger
-  return listingAPIUtil.createListing(formListing)
+  return ListingAPIUtil.createListing(formListing)
   .then(listing => dispatch(receiveListing(listing)))
 }
 

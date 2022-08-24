@@ -16,42 +16,45 @@ kyle = User.create!(username: "kyleg",email: "kyleg@email.com", password: '12345
 amin = User.create!(username: "aminb",email: "aminb@email.com", password: '123456')
 
 # Listings
-Brownstone = Listing.create!(
+brownstone = Listing.create!(
   owner_id: alo.id,
   title: "Brooklyn Brownstone", 
+  reserved_status: false,
   description: "Lovely Brownstone in BedStuy", 
-  price: "$450", 
+  price: 450.00, 
   rooms: 4, 
   beds: 4, 
   bathrooms: 2, 
   property_type: "Brownstone", 
-  longitutde: 0.000001, 
+  longitude: 0.000001, 
   latitude: 0.000002
 )
  
-Duplex = Listing.create!(
+duplex = Listing.create!(
   owner_id: kyle.id,
   title: "Bronx Duplex", 
+  reserved_status: false,
   description: "First floor of a 2 family unit in the Bronx", 
-  price: "$375", 
+  price: 375.00, 
   rooms: 3, 
   beds: 3, 
   bathrooms: 2, 
   property_type: "Duplex", 
-  longitutde: 0.500001, 
+  longitude: 0.500001, 
   latitude: 0.500002
 )
  
-Beachfront = Listing.create!(
+beachfront = Listing.create!(
   owner_id: amin.id,
   title: "Jersey Beach Front House", 
+  reserved_status: false,
   description: "Beautiful house orverlooking the Jersey Shore", 
-  price: "$600", 
+  price: 600.00, 
   rooms: 5, 
   beds: 5, 
   bathrooms: 3, 
   property_type: "Duplex", 
-  longitutde: 0.300001, 
+  longitude: 0.300001, 
   latitude: 0.300002
 )
 
