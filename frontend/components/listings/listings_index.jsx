@@ -1,29 +1,7 @@
 import React from 'react';
 import ListingsIndexItem from './listings_index_item';
-// import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-
-// const ListingsIndex = props => {
-//   const { listings, fetchListings } = props;
-  
-//   useEffect(() => {
-//     debugger
-//     fetchListings;
-//   }, []);
-
-//   return(
-    
-//     <div>
-//       {listings.map((listing, i) => (
-//         <ListingsIndexItem
-//           listing={listing}
-//           key={i}
-//         />
-//       ))}
-//     </div>
-//   )
-
-// };
 
 // const ListingsIndex = () => (
 //   <div className='listings-index-div'>
@@ -82,30 +60,28 @@ class ListingsIndex extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+    // debugger
     this.props.fetchListings();
   }
 
   render(){
-    debugger
+    // debugger
     return (
 
-      <div>
-        <div className='listings-index-div'>
-          <div className='listings-index-item-div'>
-          {this.props.listings.map((listing, i) => ( 
-            
+      <div className='listings-index-div'>
 
-            listing ? <ListingsIndexItem
+          {this.props.listings.map((listing, i) => ( 
+            <Link to={`api/listings/${listing.id}`} className='listings-index-item-div'>
+            
+            <ListingsIndexItem
                 listing={listing}
                 key={i}
-              /> : null
-
+            /> 
             
+            </Link>
             ))}
-          </div>
-        </div>
       </div>
+      
     )
   }
 }

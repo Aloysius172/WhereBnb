@@ -12,7 +12,7 @@ class Api::ListingsController < ApplicationController
   #   render :index
   # end
   def index 
-    debugger
+    # debugger
     @listings = Listing.all 
     render "api/listings/index"
   end
@@ -23,7 +23,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def create
-    debugger
+    # debugger
     @listing = Listing.new(listing_params)
     # @listing.reserved_status = false
     if @listing.save

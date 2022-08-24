@@ -5,7 +5,7 @@ import { fetchListings } from "../../actions/listings/listings.actions";
 import ListingsIndex from "./listings_index";
 
 const mSTP = (state) => {
-  debugger
+  // debugger
   return{
     listings: 
     Object.values(
@@ -15,7 +15,7 @@ const mSTP = (state) => {
 }
 
 const mDTP = dispatch => {
-  debugger
+  // debugger
   return{
     fetchListings: () => dispatch(fetchListings())
   }

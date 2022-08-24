@@ -5,7 +5,7 @@ export const RECEIVE_LISTING = "RECEIVE_LISTING"
 export const REMOVE_LISTING = "REMOVE_LISTING"
 
 export const receiveListings = listings =>{
-  debugger
+  // debugger
   return{
   type: RECEIVE_LISTINGS,
   listings
@@ -22,7 +22,7 @@ export const removeListing = () => ({
 })
 
 export const fetchListings = ()=> dispatch =>{
-  debugger
+  // debugger
   return ListingAPIUtil.fetchListings()
   .then(listings => dispatch(receiveListings(listings)))
 }
