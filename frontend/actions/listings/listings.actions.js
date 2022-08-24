@@ -18,20 +18,26 @@ export const removeListing = () => ({
   type: REMOVE_LISTING
 })
 
-export const fetchListings = filters => dispatch =>(
-  listingAPIUtil.fetchListings(filters)
+export const fetchListings = filters => dispatch =>{
+  debugger
+  return listingAPIUtil.fetchListings(filters)
   .then(listings => dispatch(receiveListings(listings)))
-)
+}
 
-export const fetchListing = id => dispatch => (
-  listingAPIUtil.fetchListing(id)
+
+export const fetchListing = id => dispatch => {
+  // debugger
+  return listingAPIUtil.fetchListing(id)
     .then(listing => dispatch(receiveListing(listing)))
-)
+}
 
-export const createListing = formListing => dispatch => (
-  listingAPIUtil.createListing(formListing)
+
+export const createListing = formListing => dispatch => {
+  // debugger
+  return listingAPIUtil.createListing(formListing)
   .then(listing => dispatch(receiveListing(listing)))
-)
+}
+
 
 export const deleteListing = listingId => dispatch => (
   listingAPIUtil.deleteListing(listingId)

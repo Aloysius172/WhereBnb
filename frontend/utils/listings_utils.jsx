@@ -1,16 +1,19 @@
-export const fetchListings = () => (
-  $.ajax({
+export const fetchListings = () => {
+  // debugger
+  return $.ajax({
     url: 'api/listings',
     method: 'GET',
   })
-);
+;
+}
 
-export const fetchListing = id => (
-  $.ajax({
+export const fetchListing = id => {
+  // debugger
+  return $.ajax({
     url: `api/listings/${id}`,
     method: 'GET'
   })
-);
+};
 
 // export const createReview = review => (
 //   $.ajax({
@@ -20,15 +23,16 @@ export const fetchListing = id => (
 //   })
 // );
 
-export const createListing = listingForm => (
-  $.ajax({
+export const createListing = formListing => {
+  // debugger
+  return $.ajax({
     url: 'api/listings',
     method: 'POST',
-    data: listingForm,
+    data: formListing,
     contentType: false,
     processData: false
   })
-);
+};
 
 export const deleteListing = (listingId) => {
   return $.ajax({

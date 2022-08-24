@@ -16,7 +16,7 @@
 
 }
 .filter-bar-icon{
-  font-size: large;
+  // font-size: large;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +25,14 @@
 .filter-bar-icon:hover{
   color: rgb(235, 181, 3);
 }
+.filter-icon-text{
+  font-size: small;
+}
+
+.snow-icon,.barn-icon,.beach-icon,.camping-icon,.island-icon,.greenhouse-icon,.hauntedhouse-icon,.lighthouse-icon,.pool-icon{
+  font-size: x-large;
+}
+
 .filter-modal-button{
   font-size: large;
   border: 0.5px solid lightgray ;
@@ -37,3 +45,4 @@
 .filter-modal-button:hover{
   box-shadow: 0.7px 0.7px 0.7px 0.7px lightgrey;
 }
+

@@ -10,7 +10,7 @@ const App = () => (
     <NavBarContainer/>
     <FilterBar/>
     <Switch>
-      <AuthRoute exact path="/" component ={ Splash }/>
+      <AuthRoute exact path="/" component = { Splash }/>
     </Switch>
   </div>
 );

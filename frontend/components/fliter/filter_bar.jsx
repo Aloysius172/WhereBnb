@@ -25,44 +25,44 @@ const FilterBar = props => {
   <div className="filter-bar-div">
     <button className='filter-bar-icon'>
        <FaSnowman className='snow-icon'/>
-       <span>Arctic</span>
+       <span className='filter-icon-text'>Arctic</span>
     </button>
     <button className='filter-bar-icon'>
       <GiBarn className='barn-icon'/>
-      <span>Barn</span>
+      <span className='filter-icon-text'>Barn</span>
     </button>
     <button className='filter-bar-icon'>
       <FaUmbrellaBeach className='beach-icon'/>
-      <span>Beach</span>
+       <span className='filter-icon-text'>Beach</span>
     </button>
     <button className='filter-bar-icon'>
       <GiCampingTent className='camping-icon'/>
-      <span>Camping</span>
+       <span className='filter-icon-text'>Camping</span>
     </button>
     <button className='filter-bar-icon'>
       <GiIsland className='island-icon'/>
-      <span>Island</span>
+       <span className='filter-icon-text'>Island</span>
     </button>
     <button className='filter-bar-icon'>
       <GiGreenhouse className='greenhouse-icon' />
-      <span>Greenhouse</span>
+       <span className='filter-icon-text'>Greenhouse</span>
     </button>
     <button className='filter-bar-icon'>
       <GiSpookyHouse className='hauntedhouse-icon' />
-      <span>Haunted</span>
+       <span className='filter-icon-text'>Haunted</span>
     </button>
     <button className='filter-bar-icon'>
       <GiLighthouse className='lighthouse-icon'/>
-      <span>Lighthouse</span>
+       <span className='filter-icon-text'>Lighthouse</span>
     </button>
     <button className='filter-bar-icon'>
      <MdPool className='pool-icon' />
-     <span>Pool</span>
+       <span className='filter-icon-text'>Pool</span>
     </button>
 
     <button className='filter-modal-button'>
        <BiSliderAlt className='filter-button-icon'/>
-      <span>Filter</span>
+       <span className='filter-icon-text'>Filter</span>
     </button>
 
 
