@@ -69,15 +69,12 @@ class ListingsIndex extends React.Component {
     return (
 
       <div className='listings-index-div'>
-
           {this.props.listings.map((listing, i) => ( 
-            <Link to={`api/listings/${listing.id}`} className='listings-index-item-div'>
-            
-            <ListingsIndexItem
-                listing={listing}
-                key={i}
-            /> 
-            
+            <Link to={`api/listings/${listing.id}`} className='listings-index-item-div' key={i}>  
+              <ListingsIndexItem
+                  listing={listing}
+                  key={listing.id}
+              /> 
             </Link>
             ))}
       </div>

@@ -1,4 +1,5 @@
 json.extract! listing, :id,
+:owner_id,
 :title,
 :reserved_status,
 :description,
@@ -9,4 +10,3 @@ json.extract! listing, :id,
 :property_type,
 :longitude,
 :latitude
-# debugger 

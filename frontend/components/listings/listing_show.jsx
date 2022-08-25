@@ -6,10 +6,21 @@ class ListingShow extends React.Component{
 
   }
 
+  componentDidMount() {
+    this.props.fetchListing(this.props.match.params.listingId);
+    // this.props.receiveUser(this.props.ownerId)
+  }
+
+
   render(){
     return(
       <div>
-
+        <span>
+          {/* {this.props.listing.title} */}
+          {/* {this.props.owner} */}
+          {}
+        </span>
+        show 
       </div>
     )
   }

@@ -35,11 +35,11 @@ export const fetchListing = id => dispatch => {
 }
 
 
-export const createListing = formListing => dispatch => {
-  // debugger
-  return ListingAPIUtil.createListing(formListing)
-  .then(listing => dispatch(receiveListing(listing)))
-}
+// export const createListing = formListing => dispatch => {
+//   // debugger
+//   return ListingAPIUtil.createListing(formListing)
+//   .then(listing => dispatch(receiveListing(listing)))
+// }
 
 
 export const deleteListing = listingId => dispatch => (
