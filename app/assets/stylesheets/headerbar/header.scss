@@ -18,26 +18,27 @@
 }
 
 .nav-link {
-  padding-left: 45px;
+  // padding-left: 45px;
 
 }
 
 .user-icon{
-  position: fixed;
-  top: 23px;
-  right: 67px;
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 15px;
   font-size: 20px;
   color: rgb(235, 181, 3);
   background: transparent;
-  justify-content: space-evenly;
+  justify-content: space-between;
   // float: ;
 }
 
 .user-icon-div{
   // right: 30px;
-  // position: relative;
+  position: relative;
   // display: flex;
-  // flex-direction: row;
+  // flex-direction: column;
   border: 0.5px solid lightgray;
   border-radius: 25px;
   width: 70px;
@@ -102,5 +103,7 @@
   color: rgb(235, 181, 3);
   cursor: pointer;
 }
-
+// .dropdown-menu{
+//   position: relative;
+// }
 

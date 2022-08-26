@@ -5,7 +5,9 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
+  // border-radius: 25px;
   z-index: 5;
+  
 }
 
 
@@ -18,23 +20,27 @@
   transform: translate(-50%, -50%);
 }
 
+.login-form-container{
+  background: none;
 
+}
 .login-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .signup-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .login-input {
   margin-left: 14px;
-
-
+  border: .5px grey solid;
 }
 
 .login-form-box {
@@ -43,6 +49,7 @@
   padding: 20px;
   background: white;
   position: relative;
+  border: .7px lightgray solid;
   border-radius: 25px;
 
 }
@@ -57,13 +64,26 @@
 
 .demo-login-button{
   width: 100%;
-  background-color: rgb(95, 175, 88);
+  background-color: rgb(235, 181, 3);
   font-size: medium ;
   color: white;  
 }
 .session-submit{
-  background-color: rgb(95, 175, 88);
+  background-color: rgb(235, 181, 3);
   font-size: medium;
   color: white;
+  align-items: center;
+  justify-content: center;
 }
 
+.authform-errors{
+  color: red;
+}
+
+.other-form-option{
+  color: grey;
+}
+
+.other-form-option-button{
+  color: purple;
+}
