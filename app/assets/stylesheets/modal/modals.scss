@@ -74,6 +74,8 @@
   color: white;
   align-items: center;
   justify-content: center;
+  // display: contents;
+  
 }
 
 .authform-errors{
@@ -82,6 +84,7 @@
 
 .other-form-option{
   color: grey;
+  display: flex;
 }
 
 .other-form-option-button{
