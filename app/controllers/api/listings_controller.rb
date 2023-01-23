@@ -1,16 +1,6 @@
 class Api::ListingsController < ApplicationController
     before_action :require_logged_in, only: [:create]
 
-  # def index
-  #   benches = bounds ? Listing.in_bounds(bounds) : Listing.all
-
-  #   # if params[:minSeating] && params[:maxSeating]
-  #     listing = listing.where(seating: seating_range)
-  #   end
-
-  #   @listings = listings.includes(:reviews, :favorite_users)
-  #   render :index
-  # end
   def index 
     # debugger
     @listings = Listing.all 
@@ -34,7 +24,7 @@ class Api::ListingsController < ApplicationController
   end
 
   private
-  # range
+  
 
   def listing_params
     params.require(:listing).permit(
@@ -51,8 +41,5 @@ class Api::ListingsController < ApplicationController
     )
   end
 
-  # def bounds
-  #   params[:bounds]
-  # end
 
 end

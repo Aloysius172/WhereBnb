@@ -55,11 +55,10 @@ class AuthForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to WhereBnB!
           <br />
-          {/* Please {this.props.formType} or {this.props.otherForm} */}
           {this.renderErrors()}
           {this.props.formType === 'Login' ? <button className="demo-login-button" onClick={this.demoUser}>Demo Login</button> : null}
           <div className="login-form">
-            <br />
+            {/* <br /> */}
               <input type="text"
                 value={this.state.username}
                 placeholder="Username"
@@ -67,7 +66,7 @@ class AuthForm extends React.Component {
                 className="login-input"
               />
            
-            <br />
+            {/* <br /> */}
             { this.props.formType === 'Signup' ? 
                 <input type="text"
                   value={this.state.email}
@@ -76,14 +75,14 @@ class AuthForm extends React.Component {
                   className="login-input"
                 />
               : null }
-            <br />
+            {/* <br /> */}
               <input type="password"
                 value={this.state.password}
                 placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input"
               />        
-            <br />
+            {/* <br /> */}
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
           {this.props.formType === 'Signup' ? <div className='other-form-option'>

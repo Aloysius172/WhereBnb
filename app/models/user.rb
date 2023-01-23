@@ -14,6 +14,11 @@ class User < ApplicationRecord
   foreign_key: :owner_id,
   class_name: 'Listing'
 
+  has_many :reservations,
+  primary_key: :id,
+  foreign_key: :reserver_id,
+  class_name: 'Reservation'
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

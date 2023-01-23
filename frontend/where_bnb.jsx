@@ -13,6 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
+import {createReservation, fetchReservations} from './utils/reservations_utils'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,4 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   window.getState = store.getState
+  window.createReservation = createReservation
+  window.fetchReservations = fetchReservations
+ 
 });
