@@ -1,4 +1,5 @@
 import React from "react";
+import ReservationFormContainer from "../reservations/reservation_form_container";
 
 class ListingShow extends React.Component{
   constructor(props){
@@ -7,7 +8,7 @@ class ListingShow extends React.Component{
   }
 
   componentDidMount() {
-    debugger
+    // debugger
     this.props.fetchListing(this.props.match.params.listingId)
     // this.props.receiveUser(this.props.listing.owner_id)
   }
@@ -16,7 +17,7 @@ class ListingShow extends React.Component{
   render(){
     const listing = this.props.listing ? this.props.listing : {'title': 'loading...'}
     // const ownerId = this.props.listing.owner_id ? this.props.listing.owner_id : {}
-    debugger
+    // debugger
     return(
       <div className="listings-show-div">
         <h1 className="listing-show-title">
@@ -32,6 +33,10 @@ class ListingShow extends React.Component{
           </ul>
           <span className="listing-show-description">{listing.description}</span>
         </div>
+        <div>
+          <ReservationFormContainer listing_id={this.props.listing.id}/>
+        </div>
+        
       </div>
     )
   }

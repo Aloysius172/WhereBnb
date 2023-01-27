@@ -4,7 +4,7 @@ import { fetchListing } from "../../actions/listings/listings.actions";
 import { receiveUser } from "../../actions/user/user_actions";
 
 const mSTP = (state, ownProps) => {
-  debugger
+  // debugger
   return {listing: state.entities.listings[ownProps.match.params.listingId],}
   // ownerId: 
   // owner: state.entities.users[state.entities.listings[ownProps.match.params.listingId].owner_id],
