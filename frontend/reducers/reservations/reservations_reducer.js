@@ -1,9 +1,9 @@
-import { RECEIVE_RESERVATIOINS, RECEIVE_RESERVATION, REMOVE_RESERVATION } from '../../actions/reservations/reservation_actions'
+import { RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION } from '../../actions/reservations/reservation_actions'
 
 const reservationsReducer = (state = {}, action) => {
   Object.freeze(state)
   switch (action.type) {
-    case RECEIVE_RESERVATIOINS:
+    case RECEIVE_RESERVATIONS:
       return action.reservations;
     case RECEIVE_RESERVATION:
       const nextState = { [action.reservation.id]: action.reservation }

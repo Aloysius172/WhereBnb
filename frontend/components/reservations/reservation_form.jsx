@@ -45,11 +45,11 @@ class ReservationForm extends React.Component{
             value={this.state.reservation_end}
             onChange={this.update('reservation_end')}
           />
-          <button>submit</button>
+          <input type="submit" value="Reserve" />
         </form>
        </div>
     )
-      
+
     
   }
 }
