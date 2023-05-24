@@ -41,18 +41,28 @@ class ReservationForm extends React.Component{
     return(
        <div className='reservation-form-div'>
         <form onSubmit={this.handleSubmit} className='reservation-form'>
-          <input type="date"
-            value={this.state.reservation_start}
-            min={newDate.toISOString().split('T')[0]}
-            onChange={this.update('reservation_start')}
-            className='reservation-form-startdate-input'
-          />
-          <input type="date"
-            value={this.state.reservation_end}
-            min={nextDate.toISOString().split('T')[0]}
-            onChange={this.update('reservation_end')}
-            className='reservation-form-enddate-input'
-          />
+          <div className='date-input-container'>
+            <div className='check-in-div'>
+              <label htmlFor="check-in">Check In</label>
+              <input type="date"
+                value={this.state.reservation_start}
+                min={newDate.toISOString().split('T')[0]}
+                onChange={this.update('reservation_start')}
+                className='reservation-form-startdate-input'
+              />
+            </div>
+            <div className='check-out-div'>
+              <label htmlFor="check-out">Check Out</label>
+              <input type="date"
+                value={this.state.reservation_end}
+                min={nextDate.toISOString().split('T')[0]}
+                onChange={this.update('reservation_end')}
+                className='reservation-form-enddate-input'
+              />
+            </div>
+            
+          </div>
+          
           <input type="submit" value="Check Availabilty"  className='reservation-form-submit'/>
         </form>
        </div>

@@ -96,6 +96,7 @@
 // }
 
 
+//REVIEW
 
 .review-form-div {
   background-color: #f7f7f7;
@@ -232,4 +233,126 @@
   /* Add the following styles for the image display */
   display: flex;
   flex-direction: column;
+}
+
+// //RESERVATION
+// .reservation-form-div {
+//   /* Your existing styles for the reservation-form-div */
+
+//   /* Add the following styles to match the layout of the Airbnb reservation form */
+//   width: 400px;
+//   margin: 0 auto;
+//   padding: 20px;
+//   background-color: #f6f7f8;
+//   border: 1px solid #dddfe2;
+//   border-radius: 8px;
+// }
+
+// .reservation-form {
+//   /* Your existing styles for the reservation-form */
+
+//   /* Add the following styles to match the layout of the Airbnb reservation form */
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+  
+// }
+
+// .reservation-form-startdate-input,
+// .reservation-form-enddate-input {
+//   /* Your existing styles for the reservation-form-startdate-input and reservation-form-enddate-input */
+
+//   /* Add the following styles to match the input styling of the Airbnb reservation form */
+//   width: 150px;
+//   padding: 10px;
+//   border: 1px solid #dddfe2;
+//   border-radius: 4px;
+//   font-size: 16px;
+// }
+
+// .reservation-form-submit {
+//   /* Your existing styles for the reservation-form-submit */
+
+//   /* Add the following styles to match the button styling of the Airbnb reservation form */
+//   padding: 12px 20px;
+//   background-color: #ff5a5f;
+//   border: none;
+//   border-radius: 4px;
+//   color: #fff;
+//   font-size: 16px;
+//   cursor: pointer;
+// }
+
+.reservation-form-div {
+  /* Your existing styles for the reservation-form-div */
+
+  /* Add the following styles to match the layout of the Airbnb reservation form */
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f6f7f8;
+  border: 1px solid #dddfe2;
+  border-radius: 8px;
+}
+
+.reservation-form {
+  /* Your existing styles for the reservation-form */
+
+  /* Add the following styles to match the layout of the Airbnb reservation form */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  /* Add the following styles to match the label styling of the Airbnb reservation form */
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  // display: none;
+}
+.date-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.reservation-form-startdate-input,
+.reservation-form-enddate-input {
+  /* Your existing styles for the reservation-form-startdate-input and reservation-form-enddate-input */
+
+  /* Add the following styles to match the input styling of the Airbnb reservation form */
+  // width: calc(50% - 6px);
+  padding: 10px;
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+// .reservation-form-startdate-input::before,
+// .reservation-form-enddate-input::before {
+//   /* Add the following styles to display the label inside the input fields */
+//   content: attr(data-label);
+//   position: absolute;
+//   top: 50%;
+//   left: 10px;
+//   transform: translateY(-50%);
+//   color: #999;
+//   font-size: 14px;
+//   pointer-events: none;
+// }
+
+.reservation-form-submit {
+  /* Your existing styles for the reservation-form-submit */
+
+  /* Add the following styles to match the button styling of the Airbnb reservation form */
+  margin-top: 16px;
+  padding: 12px 20px;
+  background-color: #ff5a5f;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
 }
