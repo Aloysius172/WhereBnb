@@ -3,7 +3,7 @@ import { createReservation } from "../../actions/reservations/reservation_action
 import ReservationForm from "./reservation_form";
 
 const mSTP = (state, ownProps) => {
-  debugger
+  // debugger
   return {
     // listing_id: ownProps.match,
     reserver_id: state.session.id

@@ -10,7 +10,7 @@ const App = () => (
     <NavBarContainer/>
     <Switch>
       <Route exact path="/" component = { Splash }/>
-      <Route exact path={`/api/listings/:listingId`} component={ListingShowContainer} />
+      <Route exact path="/api/listings/:listingId" component={ListingShowContainer} />
     </Switch>
   </div>
 );

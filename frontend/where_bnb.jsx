@@ -15,6 +15,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import {createReservation, fetchReservations} from './utils/reservations_utils'
 // import {fetchReservations} from './actions/reservations/reservation_actions'
+import { createReview } from './utils/reviews_util'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -38,5 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState
   // window.createReservation = createReservation
   window.fetchReservations = fetchReservations
+  window.createReview = createReview
  
 });

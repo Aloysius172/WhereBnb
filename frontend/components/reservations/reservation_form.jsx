@@ -33,19 +33,27 @@ class ReservationForm extends React.Component{
 
 
   render(){
-    debugger
+    let newDate = new Date()
+ 
+    let nextDate = this.state.reservation_start === '' ?  newDate : new Date(this.state.reservation_start)
+    nextDate.setDate(nextDate.getDate() + 1)
+    
     return(
-       <div>
-        <form onSubmit={this.handleSubmit}>
+       <div className='reservation-form-div'>
+        <form onSubmit={this.handleSubmit} className='reservation-form'>
           <input type="date"
             value={this.state.reservation_start}
+            min={newDate.toISOString().split('T')[0]}
             onChange={this.update('reservation_start')}
+            className='reservation-form-startdate-input'
           />
           <input type="date"
             value={this.state.reservation_end}
+            min={nextDate.toISOString().split('T')[0]}
             onChange={this.update('reservation_end')}
+            className='reservation-form-enddate-input'
           />
-          <input type="submit" value="Reserve" />
+          <input type="submit" value="Check Availabilty"  className='reservation-form-submit'/>
         </form>
        </div>
     )
