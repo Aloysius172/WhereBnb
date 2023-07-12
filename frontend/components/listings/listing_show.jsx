@@ -48,7 +48,7 @@ class ListingShow extends React.Component{
           <span className="listing-show-description">{listing.description}</span>
         </div>
         <div className="listing-show-reservation-form-container">
-          <ReservationFormContainer listing_id={this.props.listing.id}/>
+          <ReservationFormContainer listing={this.props.listing}/>
         </div>
         <div className="listing-show-review-form-container">
           <ReviewFormContainer reviewed_listing_id={this.props.listing.id}/>
