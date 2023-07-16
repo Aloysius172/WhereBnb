@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_12_230542) do
+ActiveRecord::Schema.define(version: 2023_07_16_021647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2023_07_12_230542) do
     t.float "latitude", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "guests", default: 1, null: false
     t.index ["owner_id"], name: "index_listings_on_owner_id"
     t.index ["title"], name: "index_listings_on_title"
   end
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 2023_07_12_230542) do
     t.date "reservation_end", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "guests", default: 1, null: false
     t.index ["listing_id"], name: "index_reservations_on_listing_id"
     t.index ["reservation_end"], name: "index_reservations_on_reservation_end"
     t.index ["reservation_start"], name: "index_reservations_on_reservation_start"
