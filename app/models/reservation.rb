@@ -1,5 +1,5 @@
 class Reservation < ApplicationRecord
-  validates :listing_id, :reserver_id, :reservation_start, :reservation_end, presence: true
+  validates :listing_id, :reserver_id, :reservation_start, :reservation_end, :guests, presence: true
 
   belongs_to :listing,
   primary_key: :id,

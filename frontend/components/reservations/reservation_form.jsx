@@ -7,8 +7,16 @@ class ReservationForm extends React.Component{
     this.state = {
       reservation_start: '',
       reservation_end: '',
+      guests: 1,
+      clicked: false
   }
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.toggleState = this.toggleState(this);
+  }
+
+  componentDidMount() {
+    this.toggleState = this.toggleState.bind(this);
+
   }
 
   update(field) {
@@ -24,10 +32,12 @@ class ReservationForm extends React.Component{
       listing_id: this.props.listing.id,
       reserver_id: this.props.reserver_id,
       reservation_start: this.state.reservation_start,
-      reservation_end: this.state.reservation_end
+      reservation_end: this.state.reservation_end,
+      guests: this.state.guests
     };
     
     this.props.createReservation(reservation)
+    
   
   }
 
@@ -51,17 +61,21 @@ class ReservationForm extends React.Component{
  }
 
  getNumGuests(operation) {
-  let guests = 0
-  while(guests < this.props.listing.beds && guests > 0){
+  while (this.state.guests < this.props.listing.guests && guests > 0){
     if(operation === 'add'){
-      guests += 1
+      this.setState({ guests: this.state.guests += 1 }) 
     }else{
       if(operation === 'subtract'){
-      guests -= 1
+        this.setState({ guests: this.state.guests -= 1 }) 
     }}
   }
-  return guests
  }
+
+ toggleState() {
+  this.setState({clicked: !this.state.clicked})
+ }
+
+ 
 
   
 
@@ -104,7 +118,23 @@ class ReservationForm extends React.Component{
               />
             </div>
             
+            
           </div>
+          <div className='guests-input-container' onClick={this.toggleState}>
+            <div className='guest-input'>
+              <label htmlFor="guests">Guests</label>
+              <div>{this.state.guests} {this.state.guests === 1 ? 'guest' : 'guests' }</div>
+            </div>
+            <div className='dropdown-icon'>
+              +
+            </div>
+              
+            
+
+          </div>
+          {this.state.clicked && <div id='add-subtract-guest-dropdown-content'>
+            dropdown content
+          </div> }
           
           <input type="submit" value="Check Availabilty"  className='reservation-form-submit'/>
         </form>

@@ -53,6 +53,21 @@ label {
       margin-right: 6px;
 }
 
+.guests-input-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+
+}
+
+.guest-input{
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 .reservation-form-submit {

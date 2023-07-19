@@ -34,6 +34,7 @@ class Api::ListingsController < ApplicationController
       :price,
       :rooms,
       :beds,
+      :guests,
       :bathrooms,
       :property_type,
       :longitude,
