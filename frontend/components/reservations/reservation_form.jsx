@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import { IoMdArrowDropdown } from '@react-icons/all-files/Io/IoMdArrowDropdown'
 
 class ReservationForm extends React.Component{
   constructor(props){
@@ -100,7 +101,7 @@ class ReservationForm extends React.Component{
         <form onSubmit={this.handleSubmit} className='reservation-form'>
           <div className='date-input-container'>
             <div className='check-in-div'>
-              <label htmlFor="check-in">Check In</label>
+              <label htmlFor="check-in">CHECK-IN</label>
               <input type="date"
                 value={this.state.reservation_start}
                 min={newDate.toISOString().split('T')[0]}
@@ -109,7 +110,7 @@ class ReservationForm extends React.Component{
               />
             </div>
             <div className='check-out-div'>
-              <label htmlFor="check-out">Check Out</label>
+              <label htmlFor="check-out">CHECKOUT</label>
               <input type="date"
                 value={this.state.reservation_end}
                 min={nextDate.toISOString().split('T')[0]}
@@ -117,20 +118,15 @@ class ReservationForm extends React.Component{
                 className='reservation-form-enddate-input'
               />
             </div>
-            
-            
           </div>
           <div className='guests-input-container' onClick={this.toggleState}>
             <div className='guest-input'>
-              <label htmlFor="guests">Guests</label>
+              <label htmlFor="guests">GUESTS</label>
               <div>{this.state.guests} {this.state.guests === 1 ? 'guest' : 'guests' }</div>
             </div>
             <div className='dropdown-icon'>
-              +
+              <IoMdArrowDropdown/>
             </div>
-              
-            
-
           </div>
           {this.state.clicked && <div id='add-subtract-guest-dropdown-content'>
             dropdown content
