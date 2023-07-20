@@ -2,7 +2,7 @@
   
   width: 400px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 20px;
   background-color: #f6f7f8;
   border: 1px solid #dddfe2;
   border-radius: 8px;
@@ -47,6 +47,7 @@
   border-top-left-radius: 12px;
   font-size: 16px;
   padding: 6px;
+  background-color: white;
   label {
       margin-bottom: 8px;
       font-size: 10px;
@@ -62,27 +63,20 @@
   border-top-right-radius: 12px;
   font-size: 16px;
   padding: 6px;
+  background-color: white;
   label {
-      margin-bottom: 8px;
-      font-size: 10px;
-      font-weight: 600;
-    }
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: bolder;
+  }
 }
 
 .guests-input-container{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border: 1px solid black;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  font-size: 16px;
-  // padding: 6px;
-  label {
-      margin-bottom: 8px;
-      font-size: 10px;
-      font-weight: bolder;
-    }
+
+}
+.guests-input-div{
+
+
 
 
 }
@@ -90,14 +84,13 @@
 .guest-input{
   display: flex;
   flex-direction: column;
-    padding: 6px;
+  label {
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: bolder;
+  }
 }
 
-// label {
-//   margin-bottom: 8px;
-//   font-size: 10px;
-//   font-weight: 600;
-// }
 
 .reservation-form-submit {
   margin-top: 16px;

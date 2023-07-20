@@ -119,15 +119,19 @@ class ReservationForm extends React.Component{
               />
             </div>
           </div>
+
           <div className='guests-input-container' onClick={this.toggleState}>
-            <div className='guest-input'>
-              <label htmlFor="guests">GUESTS</label>
-              <div>{this.state.guests} {this.state.guests === 1 ? 'guest' : 'guests' }</div>
-            </div>
-            <div className='dropdown-icon'>
-              <IoMdArrowDropdown/>
-            </div>
+            <div className='guests-input-div'>
+              <div className='guest-input'>
+                <label htmlFor="guests">GUESTS</label>
+                <div>{this.state.guests} {this.state.guests === 1 ? 'guest' : 'guests'}</div>
+              </div>
+              <div className='dropdown-icon'>
+                <IoMdArrowDropdown />
+              </div>
+            </div>  
           </div>
+
           {this.state.clicked && <div id='add-subtract-guest-dropdown-content'>
             dropdown content
           </div> }
