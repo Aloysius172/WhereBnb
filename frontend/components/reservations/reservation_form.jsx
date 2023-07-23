@@ -1,6 +1,9 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import { IoMdArrowDropdown } from '@react-icons/all-files/Io/IoMdArrowDropdown'
+import { IoIosArrowUp } from '@react-icons/all-files/Io/IoIosArrowUp'
+import { IoIosArrowDown } from '@react-icons/all-files/Io/IoIosArrowDown'
+import { BsPlusCircle } from '@react-icons/all-files/Bs/BsPlusCircle'
+import { FiMinusCircle } from '@react-icons/all-files/Fi/FiMinusCircle'
 
 class ReservationForm extends React.Component{
   constructor(props){
@@ -121,22 +124,20 @@ class ReservationForm extends React.Component{
           </div>
 
           <div className='guests-input-container' onClick={this.toggleState}>
-            <div className='guests-input-div'>
               <div className='guest-input'>
                 <label htmlFor="guests">GUESTS</label>
                 <div>{this.state.guests} {this.state.guests === 1 ? 'guest' : 'guests'}</div>
               </div>
               <div className='dropdown-icon'>
-                <IoMdArrowDropdown />
+                {this.state.clicked ? <IoIosArrowUp /> : <IoIosArrowDown /> }
               </div>
-            </div>  
           </div>
 
           {this.state.clicked && <div id='add-subtract-guest-dropdown-content'>
             dropdown content
           </div> }
           
-          <input type="submit" value="Check Availabilty"  className='reservation-form-submit'/>
+          <input type="submit" value={this.state.reservation_start && this.state.reservation_end ? 'RESERVE' : 'CHECK AVAILABILITY'}  className='reservation-form-submit'/>
         </form>
         <div className='reservation_form_pricing_breakdown'>
           <div className='reservation_form_pernight_pricing'>
