@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #dddfe2;
   border-top-left-radius: 8px;
   font-size: 16px;
   padding: 6px;
@@ -59,7 +59,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #dddfe2;
   border-top-right-radius: 8px;
   font-size: 16px;
   padding: 6px;
@@ -72,13 +72,14 @@
 }
 
 .guests-input-container{
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 386px;
   padding: 6px;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #dddfe2;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 
@@ -106,10 +107,71 @@
   font-size: 16px;
   cursor: pointer;
   align-self: center;
-  
-  
+  width: 360px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
+.dropdown-icon{
+  position: absolute;
+  top: 25%;
+  right: 10px;
+}
+
+// dropdown
+
+.add-subtract-guest-dropdown-div {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  padding: 10px;
+  position: absolute;
+  width: 378px;
+  height: 50px;
+  z-index: 1;
+}
+
+.add-subtract-guest-dropdown-label {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.add-subtract-guest-dropdown-guest-adjust {
+  display: flex;
+  align-items: center;
+}
+//
+.subtract-guests-button,
+.add-guests-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  background-color: #f7f7f7;
+  border: 1px solid #dddfe2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.subtract-guests-button:hover,
+.add-guests-button:hover {
+  background-color: #dddfe2;
+}
+
+.add-subtract-guests-counter{
+  display: flex;
+  padding: 2px;
+}
+
+
+//price breakdown
 .reservation_form_pricing_breakdown { 
   display: flex;
   flex-direction: column;
